@@ -1,0 +1,7 @@
+C:\Users\xjinx\source\repos\NEW RPG\Engine\bin\Debug\Engine.dll
+C:\Users\xjinx\source\repos\NEW RPG\Engine\bin\Debug\Engine.pdb
+C:\Users\xjinx\source\repos\NEW RPG\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
+C:\Users\xjinx\source\repos\NEW RPG\Engine\obj\Debug\Engine.g.resources
+C:\Users\xjinx\source\repos\NEW RPG\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+C:\Users\xjinx\source\repos\NEW RPG\Engine\obj\Debug\Engine.dll
+C:\Users\xjinx\source\repos\NEW RPG\Engine\obj\Debug\Engine.pdb

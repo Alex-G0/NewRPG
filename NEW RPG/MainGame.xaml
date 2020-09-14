@@ -1,0 +1,211 @@
+﻿<Window x:Class="NEW_RPG.MainGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NEW_RPG"
+        mc:Ignorable="d"
+        Title="MainGame" Height="550" Width="820">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- Player data table -->
+            <Label Grid.Row="0" Grid.Column="0" Width="85" Content="HEALTH:" HorizontalAlignment="Left" FontFamily="Rubik" FontWeight="Bold" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black" />
+            <Label Grid.Row="1" Grid.Column="0" Width="85" Content="Strength " HorizontalAlignment="Left" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black" />
+            <Label Grid.Row="2" Grid.Column="0" Width="85" Content="Agility " HorizontalAlignment="Left" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="3" Grid.Column="0" Width="85" Content="Constitution " HorizontalAlignment="Left" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="4" Grid.Column="0" Width="85" Content="Intelligence " HorizontalAlignment="Left" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="5" Grid.Column="0" Width="85" Content="Charisma " HorizontalAlignment="Left" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+
+            <Label Grid.Row="0" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Health}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="Wheat" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="1" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Strength}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black" />
+            <Label Grid.Row="2" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Agility}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="3" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Constitution}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="4" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Intelligence}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="5" Grid.Column="1" Width="30" Content="{Binding Path=CurrentPlayer.Charisma}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+
+            <Label Grid.Row="0" Grid.Column="2" Width="50" Content="GOLD:" HorizontalAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="1" Grid.Column="2" Width="50" Content="Name:" HorizontalAlignment="Center" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black" />
+            <Label Grid.Row="2" Grid.Column="2" Width="50" Content="Race:" HorizontalAlignment="Center" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="3" Grid.Column="2" Width="50" Content="" HorizontalAlignment="Center" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="4" Grid.Column="2" Width="50" Content="" HorizontalAlignment="Center" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="5" Grid.Column="2" Width="50" Content="" HorizontalAlignment="Center" FontFamily="Rubik" Background="LightSteelBlue" BorderThickness="1" BorderBrush="Black"/>
+
+            <Label Grid.Row="0" Grid.Column="3" Width="110" Content="{Binding Path=CurrentPlayer.Gold}" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold" Background="DarkSlateGray" Foreground="Gold" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="1" Grid.Column="3" Width="110" Content="{Binding Path=CurrentPlayer.Name}" HorizontalContentAlignment="Center" FontFamily="Rubik" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black" />
+            <Label Grid.Row="2" Grid.Column="3" Width="110" Content="{Binding Path=CurrentPlayer.Race}" HorizontalContentAlignment="Center" FontFamily="Rubik" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="3" Grid.Column="3" Width="110" Content="" HorizontalAlignment="Left" FontFamily="Rubik" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="4" Grid.Column="3" Width="110" Content="" HorizontalAlignment="Left" FontFamily="Rubik" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+            <Label Grid.Row="5" Grid.Column="3" Width="110" Content="" HorizontalAlignment="Left" FontFamily="Rubik" Background="DarkSlateGray" Foreground="White" BorderThickness="1" BorderBrush="Black"/>
+        </Grid>
+        <!-- Player's inventory / quests -->
+        <Grid Grid.Row="1" Grid.Column="1" Background="White">
+            
+            <TabControl>
+                <TabItem Header="Inventory">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.GroupedInventory}"
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Item name"
+                                                Binding="{Binding GameItem.ItemName}"
+                                                Width="2*"
+                                                IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Quantity"
+                                                Width="Auto"
+                                                Binding="{Binding Quantity}"
+                                                IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Description"
+                                                Width="*"
+                                                IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Quests"/>
+            </TabControl>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="2" Background="Khaki">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Background="DarkKhaki" Content="Your location" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontFamily="Rubik"/>
+                <Label Grid.Row="1" Grid.Column="0" Background="Khaki" Content="{Binding Path=CurrentLocation.Name}" HorizontalContentAlignment="Center"  VerticalAlignment="Top" FontFamily="Rubik" BorderThickness="1" BorderBrush="Black"/>
+                <!-- Action bar -->
+                <StackPanel x:Name="ActionBar" Grid.Row="2" Grid.Column="0">
+                    <Label Background="DarkKhaki" Content="Action buttons" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Rubik" />
+                    <Button x:Name="btnAction_1" Content="{Binding Path=CurrentAction_1.Content}" Margin="3" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_2" Content="{Binding Path=CurrentAction_2.Content}" Margin="3" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_3" Content="{Binding Path=CurrentAction_3.Content}" Margin="3" Background="Silver"  Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_4" Content="{Binding Path=CurrentAction_4.Content}" Margin="3" Background="Silver"  Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_5" Content="{Binding Path=CurrentAction_5.Content}" Margin="3" Background="Silver"  Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_6" Content="{Binding Path=CurrentAction_6.Content}" Margin="3" Background="Silver"  Visibility="Collapsed"/>
+                    <Button x:Name="btnAction_7" Content="{Binding Path=CurrentAction_7.Content}" Margin="3" Background="Silver"  Visibility="Collapsed"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Background="AliceBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!-- Encounter menu -->
+                <Label x:Name="labelIdle" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Content="No active encounters" FontFamily="Rubik" VerticalContentAlignment="Center" Background="LightGreen"/>
+                <Label Grid.Row="0" Grid.Column="0" Content="Encounter menu" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Rubik" Background="DarkKhaki"/>
+                <Border x:Name="borderImage" Grid.Row="1" Grid.Column="0" BorderThickness="2" BorderBrush="Black" Background="CadetBlue" Visibility="Collapsed">
+                    <Image Height="130" Width="130" Source="{Binding CurrentEncounter.ImageName}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <Label x:Name="labelEncounter" Grid.Row="2" Grid.Column="0" Content="" FontFamily="Rubik" FontWeight="Bold" HorizontalContentAlignment="Center" Visibility="Collapsed"/>
+                <StackPanel x:Name="DialogueBar" Grid.Row="3" Grid.Column="0" Background="Aquamarine" Visibility="Collapsed">
+                    <Button x:Name="btnDialogue_1" Content="{Binding Path=CurrentDialogue_1.Content}" Margin="2" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnDialogue_2" Content="{Binding Path=CurrentDialogue_2.Content}" Margin="2" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnDialogue_3" Content="{Binding Path=CurrentDialogue_3.Content}" Margin="2" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnDialogue_4" Content="{Binding Path=CurrentDialogue_4.Content}" Margin="2" Background="Silver" Visibility="Collapsed"/>
+                    <Button x:Name="btnBattle_1" Content="Attack with weapon" Margin="2" Background="Silver" Visibility="Collapsed" Click="Attack"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="210"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" Grid.Column="0" BorderBrush="DarkSlateGray" BorderThickness="5">
+                    <TextBlock  x:Name="MainText" Background="DimGray" Text="{Binding Path=CurrentLocation.Description}" FontFamily="Rubik" Foreground="White" FontSize="14" TextWrapping="Wrap"/>
+                </Border>
+                <!-- Encounter messages -->
+                <Border Grid.Row="1" Grid.Column="0" BorderBrush="GreenYellow" BorderThickness="5">
+                    <RichTextBox x:Name="ActionsText" Background="DarkGray" FontFamily="Rubik" Foreground="GreenYellow" FontSize="12" VerticalScrollBarVisibility="Auto">
+                        <RichTextBox.Resources>
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin" Value="0"/>
+                            </Style>
+                        </RichTextBox.Resources>
+                    </RichTextBox>
+
+                </Border>
+            </Grid>
+        </Grid>
+        <!-- Equipment bar -->
+        <Grid Grid.Row="1" Grid.Column="2" Background="LightSteelBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="EQUIPMENT" HorizontalContentAlignment="Center" FontFamily="Rubik" FontWeight="Bold"/>
+           
+            <ComboBox Grid.Column="0" Grid.Row="3" ItemsSource="{Binding CurrentPlayer.Weapons}"
+                      SelectedItem="{Binding CurrentWeapon}"
+                      DisplayMemberPath="ItemName"
+                      SelectedValuePath="ItemID"
+                      SelectedIndex="0"/>
+            <ComboBox Grid.Column="0" Grid.Row="4" ItemsSource="{Binding CurrentPlayer.Armors}"
+                      SelectedItem="{Binding CurrentArmor}"
+                      DisplayMemberPath="ItemName"
+                      SelectedValuePath="ItemID"/>
+            <ComboBox Grid.Column="0" Grid.Row="5" ItemsSource="{Binding CurrentPlayer.Gloves}"
+                      SelectedItem="{Binding CurrentGloves}"
+                      DisplayMemberPath="ItemName"
+                      SelectedValuePath="ItemID"/>
+            <ComboBox Grid.Column="0" Grid.Row="6" ItemsSource="{Binding CurrentPlayer.Boots}"
+                      SelectedItem="{Binding CurrentBoots}"
+                      DisplayMemberPath="ItemName"
+                      SelectedValuePath="ItemID"/>
+            <Label Grid.Column="1" Grid.Row="3" Width="70" Content="Weapon" FontFamily="Rubik" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Background="DarkSlateGray" />
+            <Label Grid.Column="1" Grid.Row="4" Width="70" Content="Armor" FontFamily="Rubik" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Background="DarkSlateGray" />
+            <Label Grid.Column="1" Grid.Row="5" Width="70" Content="Gloves" FontFamily="Rubik" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Background="DarkSlateGray" />
+            <Label Grid.Column="1" Grid.Row="6" Width="70" Content="Boots" FontFamily="Rubik" Foreground="White" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Background="DarkSlateGray" />
+
+        </Grid>
+
+
+
+    </Grid>
+    
+    
+</Window>
